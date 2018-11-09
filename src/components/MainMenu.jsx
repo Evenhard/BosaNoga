@@ -11,23 +11,22 @@ const droppedMenuList = [{
     topic: 'Повод:',
     className: 'dropped-menu__lists dropped-menu__lists_women',
     filter: 'reason',
-    items: ['Офис', 'Вечеринка', 'Свадьба', 'Спорт', 'Море', 'Дом', 'Повседневное']
+    items: ['Прогулка', 'Высокая мода', 'Спорт']
 }, {
     topic: 'Категории:',
-    className: 'dropped-menu__lists dropped-menu__lists_three-coloumns',
+    className: 'dropped-menu__lists',
     filter: 'type',
-    items: ['Балетки', 'Босоножки', 'Ботильоны', 'Ботинки', 'Ботфорты', 'Галоши', 'Кеды и кроссовки', 'Мокасины',
-        'Полусапоги', 'Резиновые сапоги', 'Сабо', 'Сапоги', 'Сникерсы', 'Тапочки', 'Туфли', 'Шлёпанцы и вьетнамки']
+    items: ['Кроссовки', 'Туфли', 'Кеды', 'Сапоги', 'Ботинки', 'Шлепанцы', 'Ботильоны']
 }, {
     topic: 'Сезон:',
     className: 'dropped-menu__lists',
     filter: 'season',
-    items: ['Зима', 'Весна', 'Лето', 'Осень']
+    items: ['Лето', 'Осень']
 }, {
     topic: 'Бренды:',
-    className: 'dropped-menu__lists',
+    className: 'dropped-menu__lists dropped-menu__lists_three-coloumns',
     filter: 'brand',
-    items: ['Albano', 'Ballin', 'Baldinini', 'Damlax', 'Nike', 'Pegia', 'Renzi']
+    items: ["Chanel", "Manolo Blahnik", "Reebok", "Christian Louboutin", "Vans", "Timberland", "Hunter", "ALDO", "Dior", "SWEAR", "GIVENCHY", "JIMMY CHOO", "Dolce & Gabbana", "GUCCI", "BALENCIAGA", "REIKE NEN", "MARNI", "MICHEL VIVIEN", "TORY BURCH", "NIKE", "GUIDI"]
 }];
 
 
@@ -46,8 +45,6 @@ export default class MainMenu extends Component {
         this.setState({
             isVisible: !this.state.isVisible
         });
-
-
     }
 
     render() {
@@ -84,7 +81,7 @@ export default class MainMenu extends Component {
 
         const MainMenuElement = (name, index) => (
             <li className="main-menu__item main-menu__item_sales" key={index}>
-                <a onClick={this.clickHandler}>{name}</a>
+                <Link to="/catalogue" onClick={this.clickHandler}>{name}</Link>
             </li>
         );
 

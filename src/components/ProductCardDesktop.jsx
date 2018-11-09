@@ -1,4 +1,3 @@
-//import React, {Component} from 'react';
 import React, {Component} from 'react';
 import ShopApi from "../js/script";
 import Swiper from 'react-id-swiper';

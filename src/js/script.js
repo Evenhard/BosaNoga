@@ -76,6 +76,7 @@ export default class ShopApi {
      * @param query
      * @returns {Promise.<TResult>}
      */
+
     static query (query) {
         console.log(query);
         return fetch(`${api}/${query}`, {headers})

@@ -6,15 +6,6 @@ import {Link} from 'react-router-dom';
 import Swiper from 'react-id-swiper';
 
 
-// import * as ReactRouter from 'react-router-dom';
-
-//const ReactRouter = window.ReactRouterDOM;
-// const Router = ReactRouter.HashRouter;
-// const Route = ReactRouter.Route;
-// const NavLink = ReactRouter.NavLink;
-// const Link = ReactRouter.Link;
-// const Switch = ReactRouter.Switch;
-
 const NewDealMenuElement = (title, id) => (
     <Tab className="new-deals__menu-item"
          selectedClassName="new-deals__menu-item new-deals__menu-item_active"
@@ -64,9 +55,6 @@ export default class NewDeals extends React.Component {
                     <TabList className="new-deals__menu-items">
                         {this.state.dealsList.map(item => NewDealMenuElement(item.title, item.id))}
                     </TabList>
-                    {
-                        //console.log(this.state.dealsElementsList)
-                    }
                     {this.state.dealsList.map(category => {
                         return (
                             <TabPanel key={category.id}>
@@ -81,7 +69,8 @@ export default class NewDeals extends React.Component {
                                                         <div className="new-deals__product_favorite"/>
                                                     </div>
                                                     <div className="new-deals__product-info">
-                                                        <Link className="h3" to={`/product-card-desktop/${listItem.id}`}>{listItem.title}</Link>
+                                                        <Link className="h3"
+                                                              to={`/product-card-desktop/${listItem.id}`}>{listItem.title}</Link>
                                                         <p>Производитель:
                                                             <br/>
                                                             <span>{listItem.brand}</span>

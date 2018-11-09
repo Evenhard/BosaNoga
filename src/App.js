@@ -15,21 +15,14 @@ import 'react-id-swiper/src/styles/css/swiper.css';
 import {BrowserRouter} from 'react-router-dom';
 import Routes from './Routes';
 
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-class App extends Component {
-
-    componentDidMount() {
-        // ShopApi.query("categories").then(data => {
-        //     data.map(item => console.log(item));
-        // });
-    }
-
+export default class App extends Component {
     render() {
         return (
             <div className="App">
-                <BrowserRouter>
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <div>
                         <Header/>
                         <main className="container">
@@ -40,8 +33,5 @@ class App extends Component {
                 </BrowserRouter>
             </div>
         )
-            ;
     }
 }
-
-export default App;

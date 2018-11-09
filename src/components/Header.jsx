@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MainMenu from "../Components/MainMenu";
+import MainMenu from "./MainMenu";
 import {Link} from 'react-router-dom';
 
 {/* ВЕХНЕЕ МЕНЮ */}

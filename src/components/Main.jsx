@@ -1,9 +1,8 @@
-//import React, {Component} from 'react';
 import React from 'react';
 import Swiper from 'react-id-swiper';
 //import ShopApi from "../js/script";
 
-import NewDeals from "../Components/main/NewDeals";
+import NewDeals from "./main/NewDeals";
 
 
 class Slider extends React.Component {

@@ -594,7 +594,7 @@ li.active {
 
 .separator-240 {
   position: relative;
-  top: 16px;
+  top: -4px;
   width: 240px;
   height: 1px;
   margin: 0 auto;
@@ -626,6 +626,15 @@ li.active {
 .sidebar__division-title {
   position: relative;
   margin: 0;
+}
+
+.sidebar__division-body {
+  transition: height 300ms;
+  height: 150px;
+}
+
+.sidebar__division-body.hidden {
+  height: 0;
 }
 
 /*Списки в сайдбаре*/

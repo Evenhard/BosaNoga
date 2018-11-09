@@ -2,8 +2,10 @@
   "name": "ra-bosa-noga",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://netology-code.github.com/ra-14-Evenhard",
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "query-string": "^6.2.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -15,7 +17,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",

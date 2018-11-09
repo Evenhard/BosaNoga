@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Catalogue, Favorite, Main, Order, OrderDone, ProductCardDesktop } from './containers';
+import { Catalogue, Favorite, Main, Order, OrderDone, ProductCardDesktop } from './components/';
 
 const Routes = () => (
     <Switch>
